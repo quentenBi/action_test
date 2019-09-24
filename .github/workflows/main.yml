@@ -12,7 +12,7 @@ jobs:
     steps:
     - name: Hello world action step
       id: print_hello
-      uses: quentenBi/test_for_container_action@master
+      uses: quentenBi/test_for_js_action@master
       with:
         greet: 'test'
 
