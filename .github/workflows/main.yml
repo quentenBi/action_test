@@ -1,0 +1,20 @@
+name: "test for action"
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    name: "say hello"
+    steps:
+    - name: Hello world action step
+      id: print_hello
+      uses: quentenBi/test_for_container_action@master
+      with:
+        greet: 'test'
+
+    - name: Get the output time
+      run: echo "The time was ${{ steps.print_hello.outputs.time }}"
